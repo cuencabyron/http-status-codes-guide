@@ -45,29 +45,29 @@ Indican que el cliente hizo algo mal en la petición.
 - **401 Unauthorized:** Autenticación requerida o fallida.             
 - **402 Payment Required:** Reservado para futurosusos.                   
 - **403 Forbidden:** El servidor entendió la petición pero se niega a cumplirla.           
-| 404    | Not Found                       | El recurso no existe.                                                                   |
-| 405    | Method Not Allowed              | El método HTTP no está permitido para este recurso.                                     |
-| 406    | Not Acceptable                  | El recurso no puede generar contenido aceptable según las cabeceras del cliente.        |
-| 407    | Proxy Authentication Required   | Se requiere autenticación con el proxy.                                                 |
-| 408    | Request Timeout                 | La petición tardó demasiado y fue cancelada.                                            |
-| 409    | Conflict                        | La petición no pudo completarse debido a un conflicto con el estado actual del recurso. |
-| 410    | Gone                            | El recurso ya no está disponible y no volverá.                                          |
-| 411    | Length Required                 | Se requiere el encabezado `Content-Length`.                                             |
-| 412    | Precondition Failed             | Una precondición en la cabecera falló.                                                  |
-| 413    | Payload Too Large               | El cuerpo de la petición es demasiado grande.                                           |
-| 414    | URI Too Long                    | La URL es demasiado larga.                                                              |
-| 415    | Unsupported Media Type          | El tipo de contenido de la petición no es soportado.                                    |
-| 416    | Range Not Satisfiable           | El rango solicitado no puede ser cumplido.                                              |
-| 417    | Expectation Failed              | El servidor no puede cumplir con la cabecera `Expect`.                                  |
-| 418    | I'm a teapot                    | [Broma de RFC 2324, Hyper Text Coffee Pot Control Protocol]                             |
-| 421    | Misdirected Request             | La petición fue dirigida a un servidor que no puede producir la respuesta.              |
-| 422    | Unprocessable Entity            | (WebDAV) La entidad está bien formada pero no se puede procesar.                        |
-| 423    | Locked                          | (WebDAV) El recurso está bloqueado.                                                     |
-| 424    | Failed Dependency               | (WebDAV) Falló porque una petición anterior falló.                                      |
-| 425    | Too Early                       | Evita procesar la petición prematuramente.                                              |
-| 426    | Upgrade Required                | Se requiere cambiar a un protocolo diferente.                                           |
-| 428    | Precondition Required           | Se requiere una precondición para evitar actualizaciones concurrentes.                  |
-| 429    | Too Many Requests               | El cliente envió demasiadas peticiones en poco tiempo.                                  |
+- **404 Not Found:** El recurso no existe.                                    
+- **405 Method Not Allowed:** El método HTTP no está permitido para este recurso.                                     
+- **406 Not Acceptable:** El recurso no puede generar contenido aceptable según las cabeceras del cliente.        
+- **407 Proxy Authentication Required:** Se requiere autenticación con el proxy.                                                 
+- **408 Request Timeout:** La petición tardó demasiado y fue cancelada.                                            
+- **409 Conflict:** La petición no pudo completarse debido a un conflicto con el estado actual del recurso. 
+- **410 Gone:** El recurso ya no está disponible y no volverá.                               
+- **411 Length Required:** Se requiere el encabezado `Content-Length`.                                             
+- **412 Precondition Failed:** Una precondición en la cabecera falló.                                                 
+- **413 Payload Too Large** El cuerpo de la petición es demasiado grande.                                           
+- **414 URI Too Long:** La URL es demasiado larga.                                                             
+- **415 Unsupported Media Type:** El tipo de contenido de la petición no es soportado.                                    
+- **416 Range Not Satisfiable:** El rango solicitado no puede ser cumplido.                                  
+- **417 Expectation Failed:** El servidor no puede cumplir con la cabecera `Expect`.                                  
+- **418 I'm a teapot:** [Broma de RFC 2324, Hyper Text Coffee Pot Control Protocol]                             
+- **421 Misdirected Request:** La petición fue dirigida a un servidor que no puede producir la respuesta.              
+- **422 Unprocessable Entity:** (WebDAV) La entidad está bien formada pero no se puede procesar.                        
+- **423 Locked:** (WebDAV) El recurso está bloqueado.                                                     
+- **424 Failed Dependency:** (WebDAV) Falló porque una petición anterior falló.                                      
+- **425 Too Early:** Evita procesar la petición prematuramente.                                              
+- **426 Upgrade Required:** Se requiere cambiar a un protocolo diferente.                                           
+- **428 Precondition Required:** Se requiere una precondición para evitar actualizaciones concurrentes.                  
+- **429 Too Many Requests:** El cliente envió demasiadas peticiones en poco tiempo.                                  
 - **431 Request Header Fields Too Large:** Los encabezados de la petición son demasiado grandes.                                   
 - **451 Unavailable For Legal Reasons:** El recurso no está disponible por motivos legales.                         
 ---
