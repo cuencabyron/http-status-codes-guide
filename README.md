@@ -17,12 +17,12 @@ La petición fue recibida, entendida y procesada correctamente.
 - **200 OK:** La petición fue exitosa.
 - **201 Created:** Se creo un recurso nuevo como resultado de la petición.
 - **202 Accepted:** La petición fue aceptada pero aún no procesada. 
-- **203 Non-Authoriative Information:** Información devulte por una fuente diferente al servidor original.  
-- **204 No Content:**   
-- **205 Reset Content:**  
-- **206 Partial Content:**  
-- **207 Multi-Status (WebDAV):**  
-- **208 Already Reported (WebDAV):**  
+- **203 Non-Authoriative Information:** Información devuelta por una fuente diferente al servidor original.  
+- **204 No Content:** La petición fue exitosa, pero no hay contenido que devolver.   
+- **205 Reset Content:** La petición fue exitosa y se solicita que el cliente restablezca la vista.  
+- **206 Partial Content:** La respuesta contiene solo una parte del recurso, según el rango solicitado.  
+- **207 Multi-Status (WebDAV):** Respuesta con múltiples códigos para diferentes recursos.  
+- **208 Already Reported (WebDAV):** Los recursos ya fueron reportados anteriormente.
 - **226 IM Used (HTTP Delta encoding):** La petición fue exitosa y se aplicó el Delta Encoding.
 ---
 
@@ -30,20 +30,20 @@ La petición fue recibida, entendida y procesada correctamente.
 El cliente debe realizar otra acción para completar la petición.
 - **300 Multiple Choices:** Hay varias opciones para el recurso solicitado.
 - **301 Moved Permanently:** El recurso se movió permanentemente a otra URL.
-- **302 Found:**
-- **303 See Other:**
-- **304 Bot Modified:**
-- **305 Use Proxy:**
-- **306 Switch Proxy:**
-- **307 Temporary Redirect:**
-- **308 Permanent Redirect:**
+- **302 Found:** Redirección temporal.
+- **303 See Other:** La respuesta debe ser obtenida con un GET en otra URL. 
+- **304 Not Modified:** El recurso no ha cambiado, usar la versión en caché.
+- **305 Use Proxy:** Se debe acceder al recurso usando el proxy especificado (Deprecado por seguridad).
+- **306 Switch Proxy:** Reservado; no se usa actualmente.
+- **307 Temporary Redirect:** Redirección temporal manteniendo el método HTTP.
+- **308 Permanent Redirect:** Redirección permanente manteniendo el método HTTP.
 ---
 
 ## 4xx - Errores del cliente
 Indican que el cliente hizo algo mal en la petición.
 - **400 Bad Request:** La petición no pudo ser entendida por el servidor.     
 - **401 Unauthorized:** Autenticación requerida o fallida.             
-- **402 Payment Required:** Reservado para futurosusos.                   
+- **402 Payment Required:** Reservado para futuros usos.                   
 - **403 Forbidden:** El servidor entendió la petición pero se niega a cumplirla.           
 - **404 Not Found:** El recurso no existe.                                    
 - **405 Method Not Allowed:** El método HTTP no está permitido para este recurso.                                     
@@ -76,12 +76,12 @@ Indican que el cliente hizo algo mal en la petición.
 El problema esta del lado del servidor.
 - **500 Internal Server Error:** Error génerico en el servidor.
 - **501 Not Implemented:** El servidor no soporta la funcionalidad.
-- **502 Bad Gateway:**
-- **503 Service Unavailble:**
+- **502 Bad Gateway:** El servidor recibió una respuesta inválida de otro servidor.
+- **503 Service Unavailble:** El servidor no puede procesar la petición (sobrecarga o mantenimiento).
 - **504 Gateway Timeout:** Tiempo agotado entre servidores.
-- **505 HTTP Version Not Supported:**
-- **506 Variant Also Negotiates:**
-- **507 Insufficient Storage (webDAV):**
-- **508 Loop Detected (webDAV):**
-- **510 No Extended:**
-- **511 Network Authentication Required:**
+- **505 HTTP Version Not Supported:** La versión de HTTP no es soportada.
+- **506 Variant Also Negotiates:** Error de negociación de contenido.
+- **507 Insufficient Storage (webDAV):** Espacio insuficiente para completar la operación.
+- **508 Loop Detected (webDAV):** Bucle infinito detectado al procesar la petición.
+- **510 No Extended:** La petición requiere extensiones adicionales.
+- **511 Network Authentication Required:** Se requiere autenticación de red (ej. proxy de WI-FI corporativa).
